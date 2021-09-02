@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICase", "APICase\APICase.csproj", "{8C267948-D5BF-420B-A024-3DB0DAFC9EEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICase.DAL", "APICase.DAL\APICase.DAL.csproj", "{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C267948-D5BF-420B-A024-3DB0DAFC9EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C267948-D5BF-420B-A024-3DB0DAFC9EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C267948-D5BF-420B-A024-3DB0DAFC9EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C267948-D5BF-420B-A024-3DB0DAFC9EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27CDA497-F969-4FA2-877A-FBC5A74BCD3A}
+	EndGlobalSection
+EndGlobal
