@@ -37,7 +37,7 @@ namespace APICase.Controllers
                 ).ToList();
             }
 
-            /* https://stackoverflow.com/questions/13766198/c-sharp-accessing-property-values-dynamically-by-property-name */
+            /*Gestolen: https://stackoverflow.com/questions/13766198/c-sharp-accessing-property-values-dynamically-by-property-name */
 
             if (!String.IsNullOrEmpty(sort))
             {
