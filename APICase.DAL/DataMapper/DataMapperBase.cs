@@ -15,6 +15,7 @@ namespace APICase.DAL.DataMapper
         }
 
         public abstract Task<List<T>> FindAll();
+        public abstract Task<List<T>> FindAll(T item);
         public abstract Task<T> Find(Key key);
         public abstract Task Insert(T item);
         public abstract Task Update(T item);

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace APICase.Controllers
@@ -20,11 +21,38 @@ namespace APICase.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Adres>>> GetAll()
+        public async Task<ActionResult<List<Adres>>> GetAll([FromQuery] string filter, [FromQuery] string sort)
         {
-            List<Adres> adres = await _adresgegevensDataMapper.FindAll();
 
-            return Ok(adres);
+            List<Adres> adressen = await _adresgegevensDataMapper.FindAll();
+
+            if (!String.IsNullOrEmpty(filter))
+            {
+                adressen = adressen.Where(a =>
+                    a.Straat.ToLower().Contains(filter.ToLower())
+                    || a.Huisnummer.ToLower().Contains(filter.ToLower())
+                    || a.PostCode.ToLower().Contains(filter.ToLower())
+                    || a.Plaats.ToLower().Contains(filter.ToLower())
+                    || a.Land.ToLower().Contains(filter.ToLower())
+                ).ToList();
+            }
+
+            /* https://stackoverflow.com/questions/13766198/c-sharp-accessing-property-values-dynamically-by-property-name */
+
+            if (!String.IsNullOrEmpty(sort))
+            {
+                Adres adres = new Adres();
+                foreach (PropertyInfo prop in adres.GetType().GetProperties())
+                {
+                    if (prop.Name == sort)
+                    {
+                        adressen = adressen.OrderBy(s => s.GetType().GetProperty(sort).GetValue(s, null)).ToList();
+                        break;
+                    }
+                }
+            }
+
+            return Ok(adressen);
         }
 
         [HttpGet("{id}")]

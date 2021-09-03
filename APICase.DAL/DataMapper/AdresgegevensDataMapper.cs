@@ -12,9 +12,26 @@ namespace APICase.DAL.DataMapper
         public AdresgegevensDataMapper(AdresContext context) : base(context)
         { 
         }
+
         public override async Task<List<Adres>> FindAll()
         {
             return await adresContext.Adresgegevens.AsNoTracking().ToListAsync();
+        }
+        public override async Task<List<Adres>> FindAll(Adres adresFilter)
+        {
+            if (adresFilter.Straat == null && adresFilter.Huisnummer == null && adresFilter.PostCode == null && adresFilter.Plaats == null && adresFilter.Land == null)
+            {
+                return await FindAll();
+            }
+
+            return await adresContext.Adresgegevens.Where(
+                a =>
+                a.Straat == adresFilter.Straat ||
+                a.Huisnummer == adresFilter.Huisnummer ||
+                a.PostCode == adresFilter.PostCode ||
+                a.Plaats == adresFilter.Plaats ||
+                a.Land == adresFilter.Land
+                ).AsNoTracking().ToListAsync();
         }
         public override async Task<Adres> Find(long key)
         {
