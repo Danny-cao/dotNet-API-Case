@@ -1,10 +1,6 @@
 # .NET/C# API Case
 
 ## Inhoudsopgave
-
-<br>
-
-## Table of contents
 * [Opstarten en Gebruiken](#opstarten-en-gebruiken)
 * [Trots](#trots)
 * [Minder Trots](#minder-trots)
