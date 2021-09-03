@@ -17,6 +17,7 @@ namespace APICase.Controllers
         [HttpGet]
         public ActionResult<string> GetAfstand([FromQuery] AdresAfstandDTO adresAfstand)
         {
+
             Location l1 = GetLatandLon(adresAfstand.adres1);
             Location l2 = GetLatandLon(adresAfstand.adres2);
 

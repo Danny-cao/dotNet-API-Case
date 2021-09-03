@@ -8,7 +8,6 @@ namespace APICase.DAL.DataMapper
     public interface IDataMapper<T, Key>
     {
         Task<List<T>> FindAll();
-        Task<List<T>> FindAll(T item);
         Task<T> Find(Key key);
         Task Insert(T item);
         Task Update(T item);

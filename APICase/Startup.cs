@@ -3,6 +3,7 @@ using APICase.DAL.DataMapper;
 using APICase.DAL.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,7 +22,9 @@ namespace APICase
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AdresContext>();
+            //services.AddDbContext<AdresContext>();
+            services.AddDbContext<AdresContext>(options => options.UseSqlite(@"Data Source = Adresgegevens.db;"));
+
             services.AddTransient<IDataMapper<Adres, long>, AdresgegevensDataMapper>();
             services.AddControllers();
             services.AddSwaggerGen();

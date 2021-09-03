@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICase", "APICase\APICase.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICase.DAL", "APICase.DAL\APICase.DAL.csproj", "{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICase.DAL.Test", "APICase.DAL.Test\APICase.DAL.Test.csproj", "{00E00FC9-1232-4236-A5BB-3ACD05480896}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E04DAED-9B50-4F55-BFFB-E3B35687FB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E00FC9-1232-4236-A5BB-3ACD05480896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E00FC9-1232-4236-A5BB-3ACD05480896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E00FC9-1232-4236-A5BB-3ACD05480896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E00FC9-1232-4236-A5BB-3ACD05480896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
