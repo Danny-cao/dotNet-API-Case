@@ -10,7 +10,7 @@
 ## Opstarten en Gebruiken
 
 1. Clone het project
-2. open het project in visual studio 2019
+2. Open het project in visual studio 2019
 3. Run het project (Debug, Any CPU, API Case)
 
 ![screenshot](/_images/Screenshot_1.png)
@@ -21,22 +21,22 @@
 
 ## Trots
 
-* mooie scheiding tussen DAL en Controllers
-* deel 3 : afstand berekenen tussen twee adressen werkt :) 
+* Mooie scheiding tussen DAL en Controllers
+* Deel 3 : afstand berekenen tussen twee adressen werkt :) 
 
 <br>
 
 ## Minder Trots
 
-* Filter werkt niet goed, je kan namelijk niet op meerdere attributen filteren in een keer.
-* Sorteren werkt ook niet goed, je kan net als bij de filter niet op meerdere attributen sorteren in een keer.
+* Filter werkt niet goed, je kan namelijk niet op meerdere attributen filteren in een keer
+* Sorteren werkt ook niet goed, je kan net als bij de filter niet op meerdere attributen sorteren in een keer
 
-Ik was van plan [Odata](https://www.odata.org/) te implementeren, maar dat was denk ik niet de bedoeling
+Ik was van plan [Odata](https://www.odata.org/) te implementeren, maar dat is denk ik niet de bedoeling
 
 
 <br>
 
 * Afstand berekenen implementatie is niet heel netjes gedaan. Ik probeerde het met [Flurl](https://flurl.dev/) te implementeren, maar ik liep vast met de flurl query params en kon er verder niks over vinden
-* GeolocationController gebruikt webclient en ik "open/dispose" in een methode, maar ik had het beter kunnen dependency injecten en kunnen scheiden in een aparte service class. 
+* GeolocationController gebruikt webclient en ik "open/dispose" het in een methode, maar ik had het beter kunnen dependency injecten en kunnen scheiden in een aparte service class. 
 
 * Helemaal geen unittesten geschreven. Ik moet werken dus geen tijd meer :(
