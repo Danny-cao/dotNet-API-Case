@@ -40,20 +40,22 @@ namespace APICase.Controllers
 
             string adresDataString = Encoding.UTF8.GetString(adresData);
 
-            List<Location> rootObjectList = JsonConvert.DeserializeObject<List<Location>>(adresDataString);
+            List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(adresDataString);
 
             webClient.Dispose();
 
-            return rootObjectList[0];
+            return locationList[0];
         }
 
         private double CalculateAfstand(Location l1, Location l2)
         {
+            int meterToKilometer = 1000;
+
             var cord1 = new GeoCoordinate(Convert.ToDouble(l1.lat) , Convert.ToDouble(l1.lon));
 
             var cord2 = new GeoCoordinate(Convert.ToDouble(l2.lat), Convert.ToDouble(l2.lon));
 
-            return cord1.GetDistanceTo(cord2) / 1000;
+            return cord1.GetDistanceTo(cord2) / meterToKilometer;
         }
     }
 }
