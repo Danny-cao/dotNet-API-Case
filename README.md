@@ -40,4 +40,3 @@ Ik was van plan [Odata](https://www.odata.org/) te implementeren, maar dat is de
 * GeolocationController gebruikt webclient en ik "open/dispose" het in een methode, maar ik had het beter kunnen dependency injecten en kunnen scheiden in een aparte service class. 
 
 * Weinig unittesten geschreven. Ik moet werken dus geen tijd meer :(
-* Grote bug bij afstand berekenen. als je niks invoerd dan crasht de app.
