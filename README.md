@@ -39,4 +39,5 @@ Ik was van plan [Odata](https://www.odata.org/) te implementeren, maar dat is de
 * Afstand berekenen implementatie is niet heel netjes gedaan. Ik probeerde het met [Flurl](https://flurl.dev/) te implementeren, maar ik liep vast met de flurl query params en kon er verder niks over vinden
 * GeolocationController gebruikt webclient en ik "open/dispose" het in een methode, maar ik had het beter kunnen dependency injecten en kunnen scheiden in een aparte service class. 
 
-* Helemaal geen unittesten geschreven. Ik moet werken dus geen tijd meer :(
+* Weinig unittesten geschreven. Ik moet werken dus geen tijd meer :(
+* Grote bug bij afstand berekenen. als je niks invoerd dan crasht de app.
